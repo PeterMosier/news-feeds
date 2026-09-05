@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
+<rss version="2.0"
+     xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+
   <channel>
     <title>FSN World News</title>
     <link>https://www.fsnradionews.com/</link>
     <description>Feature Story News – World News bulletin.</description>
     <language>en</language>
+
     <itunes:image href="https://petermosier.github.io/news-feeds/icons/fsn-world-news.jpg" />
+
     <ttl>60</ttl>
 
     <item>
@@ -18,3 +22,4 @@
 
   </channel>
 </rss>
+
