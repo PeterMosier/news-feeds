@@ -6,12 +6,10 @@ on:
   workflow_dispatch:       # manual trigger
 
 jobs:
-
-  permissions:
-    contents: write
-
   update-feed:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout repo
