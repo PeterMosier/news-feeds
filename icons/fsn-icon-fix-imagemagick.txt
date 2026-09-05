@@ -1,0 +1,7 @@
+magick fsn-world-news.jpg -resize 3000x3000 \
+  \( -size 2000x200 -gravity center \
+     -background "rgba(255,255,0,0.75)" \
+     -fill black -pointsize 120 \
+     label:"RSS via Peter Mosier" \) \
+  -gravity south -geometry +0+300 -composite \
+  fsn-world-news.png
