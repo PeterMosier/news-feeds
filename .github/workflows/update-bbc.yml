@@ -25,10 +25,6 @@ jobs:
           ffmpeg -y -i https://stream.live.vc.bbcmedia.co.uk/bbc_world_service \
             -t 300 -acodec libmp3lame -ab 128k audio/bbc-latest.mp3
 
-      - name: Move audio into feeds directory
-        run: |
-          mv bbc-latest.mp3 feeds/bbc-latest.mp3
-
       - name: Set up Python
         uses: actions/setup-python@v5.1.0
         with:
