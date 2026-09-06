@@ -3,7 +3,7 @@
      xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
 
   <channel>
-    <title>BBC World News</title>
+    <title>BBC News</title>
     <link>https://www.bbc.com/audio/brand/p002vsmz/</link>
     <description>BBC – World News (5 min)</description>
     <language>en</language>
@@ -13,8 +13,8 @@
     <ttl>60</ttl>
 
     <item>
-      <title>FSN World News</title>
-      <description>Latest FSN World News bulletin.</description>
+      <title>BBC News</title>
+      <description>Latest BBC News bulletin.</description>
       <enclosure url="https://petermosier.github.io/news-feeds/audio/bbc-worldservice-latest.mp3" type="audio/mpeg"/>
       <guid isPermaLink="false">fsn-world-news-20260906-1949</guid>
       <pubDate>Sun, 06 Sep 2026 19:49:52 -0000</pubDate>
