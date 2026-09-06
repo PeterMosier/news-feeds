@@ -1,0 +1,49 @@
+name: Update BBC Feed Hourly
+
+on:
+  schedule:
+    - cron: "0 * * * *"   # every hour
+  workflow_dispatch:       # manual trigger
+
+jobs:
+  update-bbc:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+      uses: actions/checkout@v4.1.7
+
+      - name: Install FFmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+
+      - name: Record 5 minutes of BBC World Service
+        run: |
+          ffmpeg -y -i https://stream.live.vc.bbcmedia.co.uk/bbc_world_service \
+            -t 300 -acodec libmp3lame -ab 128k bbc-latest.mp3
+
+      - name: Move audio into feeds directory
+        run: |
+          mv bbc-latest.mp3 feeds/bbc-latest.mp3
+
+      - name: Set up Python
+        uses: actions/setup-python@v5.1.0
+        with:
+          python-version: "3.x"
+
+      - name: Update BBC RSS XML
+        run: |
+          python scripts/update-bbc.py
+
+      - name: Commit and push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add feeds/bbc-world-news.xml feeds/bbc-latest.mp3
+          git commit -m "Auto-update BBC feed" || echo "No changes to commit"
+          git push origin main
