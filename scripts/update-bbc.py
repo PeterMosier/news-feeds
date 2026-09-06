@@ -3,7 +3,7 @@ import email.utils
 import os
 
 FEED_PATH = "feeds/bbc-world-news.xml"
-AUDIO_FILE = "feeds/bbc-latest.mp3"
+AUDIO_FILE = "audio/bbc-latest.mp3"
 
 def main():
     # Ensure audio exists
