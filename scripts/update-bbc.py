@@ -11,10 +11,10 @@ def main():
         raise FileNotFoundError(f"Audio file not found: {AUDIO_FILE}")
 
     # RFC 2822 pubDate (Overcast requires this format)
-    pubdate = email.utils.format_datetime(datetime.datetime.utcnow())
+    pubdate = email.utils.format_datetime(datetime.datetime.now(datetime.UTC))
 
     # GUID can be anything unique — timestamp works perfectly
-    guid = f"bbc-{int(datetime.datetime.utcnow().timestamp())}"
+    guid = f"bbc-{int(datetime.datetime.now(datetime.UTC).timestamp())}"
 
     # Read existing XML
     with open(FEED_PATH, "r", encoding="utf-8") as f:
@@ -35,11 +35,13 @@ def main():
 
 def replace_tag(xml, tag, new_value):
     """Replace <tag>...</tag> with new_value."""
-    start = xml.find(f"<{tag}>")
+    start = xml.find(f"<{tag}")
     end = xml.find(f"</{tag}>", start)
     if start == -1 or end == -1:
         raise ValueError(f"Tag <{tag}> not found in XML.")
-    return xml[:start] + f"<{tag}>{new_value}</{tag}>" + xml[end+len(tag)+3:]
+    # Find the closing '>' of the opening tag
+    start_close = xml.find(">", start)
+    return xml[:start_close+1] + f"{new_value}" + xml[end:]
 
 def replace_enclosure(xml, audio_path):
     """Replace enclosure URL and length."""
