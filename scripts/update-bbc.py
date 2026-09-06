@@ -27,7 +27,7 @@ def main():
     xml = replace_tag(xml, "guid", guid)
 
     # Replace enclosure URL (always the same file)
-    xml = replace_enclosure(xml, AUDIO_FILE)
+    xml = replace_enclosure(xml, "https://petermosier.github.io/news-feeds/audio/bbc-latest.mp3")
 
     # Write updated XML
     with open(FEED_PATH, "w", encoding="utf-8") as f:
@@ -44,7 +44,7 @@ def replace_tag(xml, tag, new_value):
 def replace_enclosure(xml, audio_path):
     """Replace enclosure URL and length."""
     # Overcast only needs the URL; length is optional
-    start = xml.find("enclosure")
+    start = xml.find("<enclosure")
     if start == -1:
         raise ValueError("No enclosure tag found.")
 
