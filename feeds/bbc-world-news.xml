@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+
+  <channel>
+    <title>BBC World News</title>
+    <link>https://www.bbc.com/audio/brand/p002vsmz/</link>
+    <description>BBC – World News (5 min)</description>
+    <language>en</language>
+
+    <itunes:image href="https://petermosier.github.io/news-feeds/icons/bbc-world-news.png" />
+
+    <ttl>60</ttl>
+
+    <item>
+      <title>FSN World News</title>
+      <description>Latest FSN World News bulletin.</description>
+      <enclosure url="https://www.fsnradionews.com/FSNNews/FSNWorldNews.mp3" type="audio/mpeg"/>
+      <guid isPermaLink="false">fsn-world-news-20260906-1949</guid>
+      <pubDate>Sun, 06 Sep 2026 19:49:52 -0000</pubDate>
+    </item>
+
+  </channel>
+</rss>
