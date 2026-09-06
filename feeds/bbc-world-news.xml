@@ -15,7 +15,7 @@
     <item>
       <title>BBC News</title>
       <description>Latest BBC News bulletin.</description>
-      <enclosure url="https://petermosier.github.io/news-feeds/audio/bbc-worldservice-latest.mp3" type="audio/mpeg"/>
+      <enclosure url="https://petermosier.github.io/news-feeds/feeds/audio/bbc-latest.mp3" type="audio/mpeg"/>
       <guid isPermaLink="false">fsn-world-news-20260906-1949</guid>
       <pubDate>Sun, 06 Sep 2026 19:49:52 -0000</pubDate>
     </item>
