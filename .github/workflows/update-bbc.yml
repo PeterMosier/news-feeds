@@ -33,6 +33,11 @@ jobs:
       - name: Update BBC RSS XML
         run: |
           python scripts/update-bbc.py
+          
+      - name: Sync with remote
+        run: |
+          git fetch origin main
+          git reset --soft origin/main
 
       - name: Commit and push changes
         env:
