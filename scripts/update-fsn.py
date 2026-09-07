@@ -24,7 +24,18 @@ xml = re.sub(r"<guid.*?>.*?</guid>",
              f'<guid isPermaLink="false">{guid}</guid>',
              xml)
 
-# Replace episode title
+# Replace episode title inside <item>
+xml = re.sub(
+    r"<item>.*?<title>.*?</title>",
+    lambda m: re.sub(
+        r"<title>.*?</title>",
+        f"<title>{title}</title>",
+        m.group(0)
+    ),
+    xml,
+    flags=re.DOTALL
+)
+
 xml = re.sub(r"<title>.*?</title>",
              f"<title>{title}</title>",
              xml)
