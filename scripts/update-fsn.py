@@ -7,6 +7,7 @@ FEED_PATH = "feeds/fsn-world-news.xml"
 now = datetime.datetime.utcnow()
 pubdate = format_datetime(now)
 guid = f"fsn-world-news-{now.strftime('%Y%m%d-%H%M')}"
+title = f"FSN World News — {now.strftime('%Y-%m-%d %H:%M UTC')}"
 
 # Read XML
 with open(FEED_PATH, "r", encoding="utf-8") as f:
@@ -21,6 +22,11 @@ xml = re.sub(r"<pubDate>.*?</pubDate>",
 # Replace GUID
 xml = re.sub(r"<guid.*?>.*?</guid>",
              f'<guid isPermaLink="false">{guid}</guid>',
+             xml)
+
+# Replace episode title
+xml = re.sub(r"<title>.*?</title>",
+             f"<title>{title}</title>",
              xml)
 
 # Write updated XML
