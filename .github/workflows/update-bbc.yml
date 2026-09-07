@@ -1,4 +1,4 @@
-name: Update BBC Feed Hourly
+name: Update BBC Feed 4x Per Day
 # re register cron 
 
 on:
