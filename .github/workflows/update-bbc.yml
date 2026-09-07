@@ -26,7 +26,7 @@ jobs:
             -t 300 -acodec libmp3lame -ab 128k audio/bbc-latest.mp3
 
       - name: Set up Python
-        uses: actions/setup-python@v5.1.0
+        uses: actions/setup-python@v7.0.0
         with:
           python-version: "3.x"
 
