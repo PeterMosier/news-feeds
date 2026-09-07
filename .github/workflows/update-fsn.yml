@@ -2,7 +2,7 @@ name: Update FSN Feed Hourly
 
 on:
   schedule:
-    - cron: "0 * * * *"   # every hour
+    - cron: "20 * * * *"   # every hour
   workflow_dispatch:       # manual trigger
 
 jobs:
