@@ -24,6 +24,11 @@ jobs:
         run: |
           python scripts/update-fsn.py
 
+      - name: Sync with remote
+        run: |
+          git fetch origin main
+          git reset --soft origin/main
+
       - name: Commit and push changes
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
