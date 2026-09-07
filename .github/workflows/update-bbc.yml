@@ -5,6 +5,14 @@ on:
     - cron: "59 * * * *"   # every hour
   workflow_dispatch:       # manual trigger
 
+on:
+  schedule:
+    - cron: "59 23 * * *"
+    - cron: "59 5 * * *"
+    - cron: "59 11 * * *"
+    - cron: "59 17 * * *"
+  workflow_dispatch:       # manual trigger
+
 jobs:
   update-bbc:
     runs-on: ubuntu-latest
