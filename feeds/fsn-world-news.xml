@@ -3,9 +3,9 @@
      xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
 
   <channel>
-    <title>FSN World News</title>
+    <title>FSN World News via Peter Mosier</title>
     <link>https://www.fsnradionews.com/</link>
-    <description>Feature Story News – World News bulletin.</description>
+    <description>Feature Story News – World News bulletin as published at https://www.fsnradionews.com/FSNNews/FSNWorldNews.mp3</description>
     <language>en</language>
 
     <itunes:image href="https://petermosier.github.io/news-feeds/icons/fsn-world-news.png" />
@@ -13,7 +13,7 @@
     <ttl>60</ttl>
 
     <item>
-      <title>FSN World News</title>
+      <title>FSN World News Latest</title>
       <description>Latest FSN World News bulletin.</description>
       <enclosure url="https://www.fsnradionews.com/FSNNews/FSNWorldNews.mp3" type="audio/mpeg"/>
       <guid isPermaLink="false">fsn-world-news-20260907-1350</guid>
