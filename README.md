@@ -4,11 +4,14 @@ XML / RSS feeds of various news sources. Home built replacement for "HOURLY NEWS
 Yes, I know. I could just pay them ca$60/year, but it just seems a little bit much. I would pay CA$10/year, sure. Even ca$20/year, I'd just pay it. But $60 is too much: it's 3X the price of Overcast (currently ca$19.99/year), a general purpose Podcast app (https://apps.apple.com/us/app/overcast-podcast-app/id888422857).
 
 To replace Hourly News, I thought I would be able to simply create a folder in Overcast and add the needed channels, but that only worked for some sources that still published their hourly news via RSS feeds:
-- NPR
+- NPR News
+- CBC The World This Hour
 - DW News
 - NPR Marketplace Morning Report
 - NPR Marketplace Tech
-- Fox News (I like to hear how the fascists are spinning the news)
+- NPR Up First
+- Fox News Hourly Update (I like to hear how the fascists are spinning the news)
+- CNN Five Things
 
 But I was missing these favourites: CBC, BBC, FSN, as they don't have RSS feeds for their hourly news summary. More correctly, they /no longer/ have RSS feeds to deliver their hourly news. Yes, the BBC does syndicate BBC World News via RSS, but that is the hour-long magazine style program; I just want the quick news headlines, like they read every hour on the hour on BBC radio.
 
@@ -40,7 +43,6 @@ https://petermosier.github.io/news-feeds/feeds/bbc-world-news.xml
 ## To Do: Add the following, 0ne at a time
 This is the list of news sources that were/are in the Hourly News app.
 
-- CBC Hourly Edition
 - ABC (American Broadcast Corp) Hourly Update
 - Salem Radio News
 - RTHK News Bulletin
@@ -53,6 +55,4 @@ This is the list of news sources that were/are in the Hourly News app.
 - RNZ (Radio New Zealand) News Bulletin
 - 24/7 News: The Latest
 - New York Times Headlines
-- Up First from NPR
-- CNN 5 Things
 - ABC Start Here News
