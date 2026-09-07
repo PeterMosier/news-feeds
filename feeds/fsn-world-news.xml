@@ -3,7 +3,7 @@
      xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
 
   <channel>
-    <title>FSN World News — 2026-09-07 22:42 UTC</title>
+    <title>FSN World News — 2026-09-07 23:33 UTC</title>
     <link>https://www.fsnradionews.com/</link>
     <description>Feature Story News – World News bulletin as published at https://www.fsnradionews.com/FSNNews/FSNWorldNews.mp3</description>
     <language>en</language>
@@ -13,11 +13,11 @@
     <ttl>60</ttl>
 
     <item>
-      <title>FSN World News — 2026-09-07 22:42 UTC</title>
+      <title>FSN World News — 2026-09-07 23:33 UTC</title>
       <description>Latest FSN World News bulletin.</description>
       <enclosure url="https://www.fsnradionews.com/FSNNews/FSNWorldNews.mp3" type="audio/mpeg"/>
-      <guid isPermaLink="false">fsn-world-news-20260907-2242</guid>
-      <pubDate>Mon, 07 Sep 2026 22:42:42 -0000</pubDate>
+      <guid isPermaLink="false">fsn-world-news-20260907-2333</guid>
+      <pubDate>Mon, 07 Sep 2026 23:33:17 -0000</pubDate>
     </item>
 
   </channel>
