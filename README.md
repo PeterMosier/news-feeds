@@ -45,7 +45,7 @@ The BBC *DOES* have a constant live-stream of their main radio show, and they re
 
 Once per hour, at one minute before the top of the hour (xx:59), a Github action in this repo uses FFMPEG to record exactly 8 minutes (480 seconds) of the BBC live stream. The MP3 is stored in the */audio* folder in this repo; no archive is kept and the MP3 file simply gets over-written with the newest recording. Think of it like pressing "Record" on a home cassette deck like we did back in the day, but instead of saving music to a mix tape, I am saving the five-minute news summary to a digital cassette which is constantly overwritten every hour. Then the GH Action updates the timestamp and GUID in the RSS/XML, so that Overcast knows that a new episode is available.
 
-My five minute MP3 (no, you cannot simply jam this into a podcast app!)
+My eight minute MP3 (no, you cannot simply jam this into a podcast app!)
 https://petermosier.github.io/news-feeds/audio/bbc-latest.mp3
 
 The following XML works with Overcast. (Overcast > Magnifying Glass Icon > Add URL)
