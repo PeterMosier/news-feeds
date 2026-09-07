@@ -16,6 +16,9 @@ def main():
     # GUID can be anything unique — timestamp works perfectly
     guid = f"bbc-{int(datetime.datetime.now(datetime.UTC).timestamp())}"
 
+    # Title gets updated to include date and time stamp
+    title = f"BBC News Bulletin — {datetime.datetime.now(datetime.UTC).strftime('%Y-%m-%d %H:%M UTC')}"
+
     # Read existing XML
     with open(FEED_PATH, "r", encoding="utf-8") as f:
         xml = f.read()
@@ -25,6 +28,10 @@ def main():
 
     # Replace <guid>...</guid>
     xml = replace_tag(xml, "guid", guid)
+
+    # Replace <title...</title>
+    xml = replace_tag(xml, "title", title)
+
 
     # Replace enclosure URL (always the same file)
     xml = replace_enclosure(xml, "https://petermosier.github.io/news-feeds/audio/bbc-latest.mp3")
