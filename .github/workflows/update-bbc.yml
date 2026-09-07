@@ -2,7 +2,7 @@ name: Update BBC Feed Hourly
 # re register cron 
 on:
   schedule:
-    - cron: "0 * * * *"   # every hour
+    - cron: "59 * * * *"   # every hour
   workflow_dispatch:       # manual trigger
 
 jobs:
@@ -20,10 +20,10 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y ffmpeg
 
-      - name: Record 5 minutes of BBC World Service
+      - name: Record 8 minutes of BBC World Service
         run: |
           ffmpeg -y -i https://stream.live.vc.bbcmedia.co.uk/bbc_world_service \
-            -t 300 -acodec libmp3lame -ab 128k audio/bbc-latest.mp3
+            -t 480 -acodec libmp3lame -ab 128k audio/bbc-latest.mp3
 
       - name: Set up Python
         uses: actions/setup-python@v7.0.0
