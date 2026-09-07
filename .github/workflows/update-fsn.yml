@@ -6,7 +6,7 @@ on:
   workflow_dispatch:       # manual trigger
 
 jobs:
-  update-feed:
+  update-fsn:
     runs-on: ubuntu-latest
     permissions:
       contents: write
