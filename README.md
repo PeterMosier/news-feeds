@@ -3,17 +3,29 @@ XML / RSS feeds of various news sources. Home built replacement for "HOURLY NEWS
 
 Yes, I know. I could just pay them ca$60/year, but it just seems a little bit much. I would pay CA$10/year, sure. Even ca$20/year, I'd just pay it. But $60 is too much: it's 3X the price of Overcast (currently ca$19.99/year), a general purpose Podcast app (https://apps.apple.com/us/app/overcast-podcast-app/id888422857).
 
-To replace Hourly News, I thought I would be able to simply create a folder in Overcast and add the needed channels, but that only worked for some sources that still published their hourly news via RSS feeds:
+To replace Hourly News, I thought I would be able to simply create a folder in Overcast and add the needed channels. That worked for most (not all) sources that still publish their hourly news via RSS feeds.
 - NPR News
 - CBC The World This Hour
 - DW News
 - NPR Marketplace Morning Report
 - NPR Marketplace Tech
 - NPR Up First
-- Fox News Hourly Update (I like to hear how the fascists are spinning the news)
 - CNN Five Things
+- New York Times Headlines
+- New York Times Daily
+- WSJ Minute Briefing
+- WSJ What's News
+- WSJ Tech News Briefing
+- WSJ Your Money Briefing
+- AP: Headline News from The Associated Press
 
-But I was missing these favourites: BBC and FSN, as they don't have RSS feeds for their hourly news summary. More correctly, BBC *no longer* has RSS feeds to deliver their hourly news. Yes, the BBC does syndicate BBC World News via RSS, but that is the hour-long magazine style program; I just want the quick news headlines, like they read every hour on the hour on BBC radio. As for FSN, I think they are a wholesale supplier of news to other organizations; in that case it makes sense that they don't have their own public facing program.
+For balance, I also include some right wing news sources
+- Fox News Hourly Update (I like to hear how the fascists are spinning the news)
+- Salem Radio News ("newscasts...specifically created for Christian-formatted radio stations") 
+
+
+## Missing Favourites ##
+I was missing two favourites: BBC and FSN, as they don't have RSS feeds for their hourly news summary. More correctly, BBC *no longer* has RSS feeds to deliver their hourly news. Yes, the BBC does syndicate BBC World News via RSS, but that is the hour-long magazine style program; I just want the quick news headlines, like they read every hour on the hour on BBC radio. As for FSN, I think they are a wholesale supplier of news to other organizations; in that case it makes sense that they don't have their own public facing program.
 
 **This GH repo is my attempt to restore those missing news sources.**
 
@@ -40,19 +52,20 @@ The following XML works with Overcast. (Overcast > Magnifying Glass Icon > Add U
 
 https://petermosier.github.io/news-feeds/feeds/bbc-world-news.xml
 
-## To Do: Add the following, 0ne at a time
-This is the list of news sources that were/are in the Hourly News app.
+## cron Problem ##
+cron jobs on GH are, apparently, unreliable. They go into a queue with thousands (?) of other jobs and might not run for many  minutes. Somethings those jobs just don't run at all.
 
-- ABC (American Broadcast Corp) Hourly Update
-- Salem Radio News
+## Overcast Update Problem ##
+Even when the RSS/XML gets updated (i.e. the cron job ran, eventually) Overcast does not seem to update reliably. That is, even thought the RSS/XML has new date/timestamp, and new GUID, Overcast doesn't indicate a new episode is available.
+
+## To Do: Add the following, One at a time
+This is the list of news sources that were/are in the Hourly News app. I may try to add them to the roundup.
+
+- ABC (American Broadcast Corp) Hourly Update (Available on Apple Podcasts and Spotify https://podcasts.apple.com/ca/podcast/abc-news-update/id1314000635?i=1000788361492)
 - RTHK News Bulletin
-- New York Times Daily
-- WSJ Minute Briefing
-- AP Headlines
 - PMN (Pacific Media Network) Hourly News Updates
 - Sky News Bulletin
 - Bloomberg News Now
 - RNZ (Radio New Zealand) News Bulletin
 - 24/7 News: The Latest
-- New York Times Headlines
 - ABC Start Here News
