@@ -13,7 +13,7 @@ To replace Hourly News, I thought I would be able to simply create a folder in O
 - Fox News Hourly Update (I like to hear how the fascists are spinning the news)
 - CNN Five Things
 
-But I was missing these favourites: CBC, BBC, FSN, as they don't have RSS feeds for their hourly news summary. More correctly, they /no longer/ have RSS feeds to deliver their hourly news. Yes, the BBC does syndicate BBC World News via RSS, but that is the hour-long magazine style program; I just want the quick news headlines, like they read every hour on the hour on BBC radio.
+But I was missing these favourites: BBC and FSN, as they don't have RSS feeds for their hourly news summary. More correctly, BBC *no longer* has RSS feeds to deliver their hourly news. Yes, the BBC does syndicate BBC World News via RSS, but that is the hour-long magazine style program; I just want the quick news headlines, like they read every hour on the hour on BBC radio. As for FSN, I think they are a wholesale supplier of news to other organizations; in that case it makes sense that they don't have their own public facing program.
 
 **This GH repo is my attempt to restore those missing news sources.**
 
@@ -31,7 +31,7 @@ As mentioned above, BBC no longer publishes any easily accessible feeds of their
 
 The BBC *DOES* have a constant live-stream of their main radio show, and they read news headlines for exactly five minutes at the top of every hour (https://stream.live.vc.bbcmedia.co.uk/bbc_world_service).
 
-Once per hour, at the top of the hour, a Github action in this repo uses FFMPEG to record exactly 5 minutes of the BBC live stream. The MP3 is stored in the **/audio** folder in this repo; no archive is kept and the MP3 file simply gets over-written with the newest recording. Think of it like pressing "Record" on a home cassette deck like we did back in the day, but instead of saving music to a mix tape, I am saving the five-minute news summary to a digital cassette which is constantly overwritten every hour. Then the GH Action updates the timestamp and GUID in the RSS/XML, so that Overcast knows that a new episode is available.
+Once per hour, at the top of the hour, a Github action in this repo uses FFMPEG to record exactly 5 minutes of the BBC live stream. The MP3 is stored in the */audio* folder in this repo; no archive is kept and the MP3 file simply gets over-written with the newest recording. Think of it like pressing "Record" on a home cassette deck like we did back in the day, but instead of saving music to a mix tape, I am saving the five-minute news summary to a digital cassette which is constantly overwritten every hour. Then the GH Action updates the timestamp and GUID in the RSS/XML, so that Overcast knows that a new episode is available.
 
 My five minute MP3 (no, you cannot simply jam this into a podcast app!)
 https://petermosier.github.io/news-feeds/audio/bbc-latest.mp3
