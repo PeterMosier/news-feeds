@@ -29,9 +29,17 @@ def main():
     # Replace <guid>...</guid>
     xml = replace_tag(xml, "guid", guid)
 
-    # Replace <title...</title>
-    xml = replace_tag(xml, "title", title)
-
+    # Replace episode <title> inside <item>
+    xml = re.sub(
+        r"<item>.*?<title>.*?</title>",
+        lambda m: re.sub(
+            r"<title>.*?</title>",
+            f"<title>BBC News Bulletin — {datetime.datetime.now(datetime.UTC).strftime('%Y-%m-%d %H:%M UTC')}</title>",
+            m.group(0)
+        ),
+        xml,
+        flags=re.DOTALL
+    )
 
     # Replace enclosure URL (always the same file)
     xml = replace_enclosure(xml, "https://petermosier.github.io/news-feeds/audio/bbc-latest.mp3")
