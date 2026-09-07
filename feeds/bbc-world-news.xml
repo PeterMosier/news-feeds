@@ -3,7 +3,7 @@
      xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
 
   <channel>
-    <title>BBC News</title>
+    <title>BBC News via Peter Mosier</title>
     <link>https://www.bbc.com/audio/brand/p002vsmz/</link>
     <description>BBC – World News (5 min)</description>
     <language>en</language>
@@ -13,8 +13,8 @@
     <ttl>60</ttl>
 
     <item>
-      <title>BBC News</title>
-      <description>Latest BBC News bulletin.</description>
+      <title>BBC News latest 5min ToH</title>
+      <description>Latest BBC News bulletin. Five minutes at top of hour recorded from https://stream.live.vc.bbcmedia.co.uk/bbc_world_service</description>
       <enclosure url="https://petermosier.github.io/news-feeds/audio/bbc-latest.mp3" type="audio/mpeg" />
       <guid isPermaLink="false">bbc-1788798395</guid>
       <pubDate>Mon, 07 Sep 2026 16:26:35 +0000</pubDate>
