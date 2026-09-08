@@ -21,7 +21,7 @@ To replace Hourly News, I thought I would be able to simply create a folder in O
 
 For balance, I also include some right wing news sources
 - Fox News Hourly Update (I like to hear how the fascists are spinning the news)
-- Salem Radio News ("newscasts...specifically created for Christian-formatted radio stations") 
+- Salem Radio News ("newscasts...specifically created for Christian-formatted radio stations" <barf /> ) 
 
 
 ## Missing Favourites ##
