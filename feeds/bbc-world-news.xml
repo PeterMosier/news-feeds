@@ -13,7 +13,7 @@
     <ttl>60</ttl>
 
     <item>
-      <title>BBC News latest</title>
+      <title>BBC News latest - 2026-09-07</title>
       <description>Latest BBC News bulletin. Five minutes at top of hour recorded from https://stream.live.vc.bbcmedia.co.uk/bbc_world_service</description>
       <enclosure url="https://petermosier.github.io/news-feeds/audio/bbc-latest.mp3?ts=1788826546" type="audio/mpeg" />
       <guid isPermaLink="false">bbc-1788823292</guid>
