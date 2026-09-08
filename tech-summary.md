@@ -1,7 +1,3 @@
-Below is a clean, high‑level **Markdown process overview** you can paste directly into your GitHub repo. It summarizes everything we accomplished: reliability fixes, feed correctness, Overcast compatibility, and structural improvements to both BBC and FSN update pipelines.
-
----
-
 # 📰 News Feed Automation — Process Overview
 
 This document summarizes the architectural and workflow improvements made to the **BBC World Service** and **FSN World News** automated podcast feeds. It covers scheduling, recording, XML generation, Overcast compatibility, and code‑level enhancements.
