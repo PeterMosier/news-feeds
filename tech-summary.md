@@ -113,8 +113,7 @@ Both scripts now follow a consistent structure.
 ```
 news-feeds/
 ├── audio/
-│   ├── bbc-latest.mp3
-│   └── fsn-latest.mp3
+│   └── bbc-latest.mp3
 ├── feeds/
 │   ├── bbc-world-news.xml
 │   └── fsn-world-news.xml
