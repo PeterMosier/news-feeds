@@ -52,6 +52,11 @@ The following XML works with Overcast. (Overcast > Magnifying Glass Icon > Add U
 
 https://petermosier.github.io/news-feeds/feeds/bbc-world-news.xml
 
+## Forcing Overcast to "see" the update ##
+Updating the <GUID> and <timestamp> in the RSS was not enough to get Overcast to recognize an update. I added a timestamp to the episode <title> but that also wasn't enough. It seems that because the URL for the FSN and BBC MP3s was not changing, Overcast was being "efficient" and not seeing it as a new episode.
+
+So I added a "?ts=xxxxxx" to the MP3 address as part of each update. 
+
 ## cron Problem ##
 cron jobs on GH are, apparently, unreliable. They go into a queue with thousands (?) of other jobs and might not run for many  minutes. Somethings those jobs just don't run at all.
 
