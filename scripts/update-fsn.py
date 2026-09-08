@@ -9,6 +9,11 @@ pubdate = format_datetime(now)
 guid = f"fsn-world-news-{now.strftime('%Y%m%d-%H%M')}"
 title = f"FSN World News — {now.strftime('%Y-%m-%d %H:%M UTC')}"
 
+# Cache-busting timestamp for enclosure URL
+ts = int(now.timestamp())
+enclosure_url = f"https://petermosier.github.io/news-feeds/audio/fsn-latest.mp3?ts={ts}"
+
+
 # Read XML
 with open(FEED_PATH, "r", encoding="utf-8") as f:
     xml = f.read()
@@ -36,9 +41,13 @@ xml = re.sub(
     flags=re.DOTALL
 )
 
-xml = re.sub(r"<title>.*?</title>",
-             f"<title>{title}</title>",
-             xml)
+# Replace enclosure URL (with timestamp)
+xml = re.sub(
+    r'<enclosure[^>]*>',
+    f'<enclosure url="{enclosure_url}" type="audio/mpeg" />',
+    xml
+)
+
 
 # Write updated XML
 with open(FEED_PATH, "w", encoding="utf-8") as f:
