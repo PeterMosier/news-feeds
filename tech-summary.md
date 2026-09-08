@@ -107,13 +107,8 @@ This forces Overcast to treat each episode as new and download it automatically.
 Both scripts now follow a consistent structure.
 
 ---
-That’s totally fine, Peter — and your change is correct. FSN’s audio is **not** hosted in your repo, so the `/audio/fsn-latest.mp3` reference in the overview needed to be removed. The rest of the process overview still stands exactly as written.
 
-Here’s a clean, corrected version of that specific section so you can drop it into your repo without confusion.
-
----
-
-### **FSN Enclosure Handling**
+## 📁 7. **FSN Enclosure Handling**
 
 FSN’s MP3 is **hosted externally by Feature Story News**, not in this repository.  
 The update script now:
@@ -133,7 +128,7 @@ This matches the BBC approach and ensures consistent behavior across both feeds.
 
 ---
 
-## 📁 7. Repository Structure
+## 📁 8. Repository Structure
 
 ```
 news-feeds/
