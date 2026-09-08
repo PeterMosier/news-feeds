@@ -16,6 +16,11 @@ def main():
     # GUID can be anything unique — timestamp works perfectly
     guid = f"bbc-{int(datetime.datetime.now(datetime.UTC).timestamp())}"
 
+    # Cache-busting timestamp for enclosure URL
+    ts = int(datetime.datetime.now(datetime.UTC).timestamp())
+    enclosure_url = f"https://petermosier.github.io/news-feeds/audio/bbc-latest.mp3?ts={ts}"
+
+
     # Title gets updated to include date and time stamp
     title = f"BBC News Bulletin — {datetime.datetime.now(datetime.UTC).strftime('%Y-%m-%d %H:%M UTC')}"
 
@@ -42,7 +47,7 @@ def main():
     )
 
     # Replace enclosure URL (always the same file)
-    xml = replace_enclosure(xml, "https://petermosier.github.io/news-feeds/audio/bbc-latest.mp3")
+    xml = replace_enclosure(xml, enclosure_url)
 
     # Write updated XML
     with open(FEED_PATH, "w", encoding="utf-8") as f:
