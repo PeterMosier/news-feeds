@@ -107,6 +107,31 @@ This forces Overcast to treat each episode as new and download it automatically.
 Both scripts now follow a consistent structure.
 
 ---
+That’s totally fine, Peter — and your change is correct. FSN’s audio is **not** hosted in your repo, so the `/audio/fsn-latest.mp3` reference in the overview needed to be removed. The rest of the process overview still stands exactly as written.
+
+Here’s a clean, corrected version of that specific section so you can drop it into your repo without confusion.
+
+---
+
+### **FSN Enclosure Handling**
+
+FSN’s MP3 is **hosted externally by Feature Story News**, not in this repository.  
+The update script now:
+
+- Generates a timestamped enclosure URL using the *external* FSN MP3 location.
+- Adds a cache‑busting query parameter (`?ts=UNIX_TIMESTAMP`) to ensure Overcast treats each episode as new.
+- Leaves the actual FSN audio URL unchanged — only the RSS enclosure URL is modified.
+
+Example:
+
+```
+<enclosure url="https://www.fsnradionews.com/FSNNews/FSNWorldNews.mp3?ts=1694123456"
+           type="audio/mpeg" />
+```
+
+This matches the BBC approach and ensures consistent behavior across both feeds.
+
+---
 
 ## 📁 7. Repository Structure
 
