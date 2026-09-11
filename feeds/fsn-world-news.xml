@@ -13,11 +13,11 @@
     <ttl>60</ttl>
 
     <item>
-      <title>FSN World News — 2026-09-11 06:04 UTC</title>
+      <title>FSN World News — 2026-09-11 11:29 UTC</title>
       <description>Latest FSN World News bulletin.</description>
-      <enclosure url="https://petermosier.github.io/news-feeds/audio/fsn-latest.mp3?ts=1789106687" type="audio/mpeg" />
-      <guid isPermaLink="false">fsn-world-news-20260911-0604</guid>
-      <pubDate>Fri, 11 Sep 2026 06:04:47 -0000</pubDate>
+      <enclosure url="https://petermosier.github.io/news-feeds/audio/fsn-latest.mp3?ts=1789126172" type="audio/mpeg" />
+      <guid isPermaLink="false">fsn-world-news-20260911-1129</guid>
+      <pubDate>Fri, 11 Sep 2026 11:29:32 -0000</pubDate>
     </item>
 
   </channel>
