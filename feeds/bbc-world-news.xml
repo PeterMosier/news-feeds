@@ -13,11 +13,11 @@
     <ttl>60</ttl>
 
     <item>
-      <title>BBC News Bulletin — 2026-09-26 21:01 UTC</title>
+      <title>BBC News Bulletin — 2026-09-27 04:21 UTC</title>
       <description>Latest BBC News bulletin. Five minutes at top of hour recorded from https://stream.live.vc.bbcmedia.co.uk/bbc_world_service</description>
-      <enclosure url="https://petermosier.github.io/news-feeds/audio/bbc-latest.mp3?ts=1790456462" type="audio/mpeg" />
-      <guid isPermaLink="false">bbc-1790456462</guid>
-      <pubDate>Sat, 26 Sep 2026 21:01:02 +0000</pubDate>
+      <enclosure url="https://petermosier.github.io/news-feeds/audio/bbc-latest.mp3?ts=1790482875" type="audio/mpeg" />
+      <guid isPermaLink="false">bbc-1790482875</guid>
+      <pubDate>Sun, 27 Sep 2026 04:21:15 +0000</pubDate>
     </item>
 
   </channel>
