@@ -1,4 +1,13 @@
 # news-feeds
+
+## TLDR
+### BBC RSS feed (add into your podcast app)
+https://petermosier.github.io/news-feeds/feeds/bbc-world-news.xml
+### FSN RSS feed (add into your podcast app)
+https://petermosier.github.io/news-feeds/feeds/fsn-world-news.xml
+
+
+## The long version
 XML / RSS feeds of various news sources. Home built replacement for "HOURLY NEWS" iOS app (https://apps.apple.com/us/app/hourly-news/id493859859). This formerly excellent app got a much needed update (added speed control, jump back/forward, etc.) but also went to a subscription model (ca$6/mo or ca$60/yr). Without subscribing, users can only choose 2 news sources. I had about six or more news sources in my morning listen routine.
 
 Yes, I know. I could just pay them ca$60/year, but it just seems a little bit much. I would pay CA$10/year, sure. Even ca$20/year, I'd just pay it. But $60 is too much: it's 3X the price of Overcast (currently ca$19.99/year), a general purpose Podcast app (https://apps.apple.com/us/app/overcast-podcast-app/id888422857).
