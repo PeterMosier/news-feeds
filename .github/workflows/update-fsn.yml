@@ -15,6 +15,16 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v7.0.1   # latest release, Node 24‑ready
 
+      - name: Download latest FSN bulletin # Download the file from source to local /audio folder
+        run: |
+          curl -L \
+            "https://www.fsnradionews.com/FSNNews/FSNWorldNews.mp3" \
+            -o audio/fsn-latest.mp3
+            
+      - name: Verify MP3 # Check if the file is locally present
+        run: |
+          ls -lh audio
+
       - name: Set up Python
         uses: actions/setup-python@v7.0.0   # latest release, Node 24‑ready
         with:
@@ -36,5 +46,6 @@ jobs:
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
           git add feeds/fsn-world-news.xml
+          git add audio/fsn-latest.mp3
           git commit -m "Auto-update FSN feed" || echo "No changes to commit"
           git push origin main
