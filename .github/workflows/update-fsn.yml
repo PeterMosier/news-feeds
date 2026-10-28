@@ -39,7 +39,7 @@ jobs:
           fi
 
       - name: Set up Python
-        uses: actions/setup-python@v7.0.0   # latest release, Node 24‑ready
+        uses: actions/setup-python@v7.1.0   # latest release, Node 24‑ready
         with:
           python-version: "3.x"
 
