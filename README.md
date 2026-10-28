@@ -67,7 +67,7 @@ Updating the <GUID> and <timestamp> in the RSS was not enough to get Overcast to
 So I added a "?ts=xxxxxx" to the MP3 address as part of each update. 
 
 ## cron Problem ##
-cron jobs on GH are, apparently, unreliable. They go into a queue with thousands (?) of other jobs and might not run for many  minutes. Somethings those jobs just don't run at all.
+cron jobs on GH are, apparently, unreliable. They go into a queue with thousands (?) of other jobs and might not run for many  minutes. Sometimes those jobs just don't run at all.
 
 ## Overcast Update Problem ##
 Even when the RSS/XML gets updated (i.e. the cron job ran, eventually) Overcast does not seem to update reliably. That is, even thought the RSS/XML has new date/timestamp, and new GUID, Overcast doesn't indicate a new episode is available.
