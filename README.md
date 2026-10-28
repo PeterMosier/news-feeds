@@ -39,6 +39,8 @@ I was missing two favourites: BBC and FSN, as they don't have RSS feeds for thei
 **This GH repo is my attempt to restore those missing news sources.**
 
 ## FSN Feature Story News
+[![Update FSN Feed Hourly](https://github.com/PeterMosier/news-feeds/actions/workflows/update-fsn.yml/badge.svg)](https://github.com/PeterMosier/news-feeds/actions/workflows/update-fsn.yml)
+
 FSN updates their MP3 at a static URL (https://www.fsnradionews.com/FSNNews/FSNWorldNews.mp3). To capture this MP3 audio and deliver to Overcast, every hour a Github action uses CURL to grab a copy of this MP3 and saves to /audio folder, then updates the timestamp and GUID in the RSS/XML stored in this repo so that Overcast recognizes an update has happened and shows that a new episode is available.
 
 Problem: if FSN has not actually updated the MP3 content (e.g. on the weekend there are no updates) the GH Action still updates the RSS/XML with a new timestamp and GUID, and Overcast will incorrectly think there is an update and show a "new" episode is available, even though the MP3 content hasn't changed. For now, I'm willing to live with this glitch.
