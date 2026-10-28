@@ -50,6 +50,8 @@ The following RSS/XML works with Overcast. (Overcast > 🔎 > Add URL)
 https://petermosier.github.io/news-feeds/feeds/fsn-world-news.xml
 
 ## BBC News
+[![Update BBC Feed 4x Per Day](https://github.com/PeterMosier/news-feeds/actions/workflows/update-bbc.yml/badge.svg)](https://github.com/PeterMosier/news-feeds/actions/workflows/update-bbc.yml)
+
 As mentioned above, BBC no longer publishes any easily accessible feeds of their 5 minute news -- they want you to go to the walled-garden of their app. I prefer to have all my news sources together in one curated place, rather than opening "who knows how many" apps. 
 
 The BBC *DOES* have a constant live-stream of their main radio show, and they read news headlines for exactly five minutes at the top of every hour (https://stream.live.vc.bbcmedia.co.uk/bbc_world_service).
