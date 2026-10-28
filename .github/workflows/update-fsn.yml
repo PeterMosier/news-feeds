@@ -15,13 +15,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v7.0.1   # latest release, Node 24‑ready
 
-      - name: Test FSN URL
-        run: |
-          curl -I \
-            -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" \
-            "https://www.fsnradionews.com/FSNNews/FSNWorldNews.mp3"
-      
-      - name: Download latest FSN bulletin
+      - name: Download latest FSN bulletin # User Agent Mozilla to avoid code 406 lockout
         run: |
           curl -L \
             -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" \
