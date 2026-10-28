@@ -15,15 +15,17 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v7.0.1   # latest release, Node 24‑ready
 
-      - name: Download latest FSN bulletin # Download the file from source to local /audio folder
+      - name: Download latest FSN bulletin
         run: |
-          curl -L \
+          curl -L -v \
             "https://www.fsnradionews.com/FSNNews/FSNWorldNews.mp3" \
             -o audio/fsn-latest.mp3
             
-      - name: Verify MP3 # Check if the file is locally present
+      - name: Verify MP3
         run: |
           ls -lh audio
+          file audio/fsn-latest.mp3
+          head -20 audio/fsn-latest.mp3
 
       - name: Set up Python
         uses: actions/setup-python@v7.0.0   # latest release, Node 24‑ready
