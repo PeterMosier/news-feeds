@@ -15,17 +15,28 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v7.0.1   # latest release, Node 24‑ready
 
+      - name: Test FSN URL
+        run: |
+          curl -I \
+            -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" \
+            "https://www.fsnradionews.com/FSNNews/FSNWorldNews.mp3"
+      
       - name: Download latest FSN bulletin
         run: |
-          curl -L -v \
+          curl -L \
+            -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" \
+            -H "Accept: audio/mpeg,*/*" \
             "https://www.fsnradionews.com/FSNNews/FSNWorldNews.mp3" \
             -o audio/fsn-latest.mp3
             
       - name: Verify MP3
         run: |
-          ls -lh audio
           file audio/fsn-latest.mp3
-          head -20 audio/fsn-latest.mp3
+      
+          if ! file audio/fsn-latest.mp3 | grep -q "Audio"; then
+            echo "ERROR: Download is not an MP3"
+            exit 1
+          fi
 
       - name: Set up Python
         uses: actions/setup-python@v7.0.0   # latest release, Node 24‑ready
