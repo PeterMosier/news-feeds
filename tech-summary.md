@@ -110,17 +110,18 @@ Both scripts now follow a consistent structure.
 
 ## 📁 7. **FSN Enclosure Handling**
 
-FSN’s MP3 is **hosted externally by Feature Story News**, not in this repository.  
-The update script now:
+FSN’s MP3 is **hosted externally by Feature Story News**, and copied into this repository using "CURL" and a MOZILLA user agent. Without specifyin the User agent, the FSN web site would reject the connection.
 
-- Generates a timestamped enclosure URL using the *external* FSN MP3 location.
+The update script now:
+- Grabs the MP3 from the FSN web site and stores it locally (this happens in the YML)
+- Generates a timestamped enclosure URL using the *local* FSN MP3 location.
 - Adds a cache‑busting query parameter (`?ts=UNIX_TIMESTAMP`) to ensure Overcast treats each episode as new.
-- Leaves the actual FSN audio URL unchanged — only the RSS enclosure URL is modified.
+- Leaves the actual local FSN audio URL unchanged — only the RSS enclosure URL is modified.
 
 Example:
 
 ```
-<enclosure url="https://www.fsnradionews.com/FSNNews/FSNWorldNews.mp3?ts=1694123456"
+<enclosure url="https://petermosier.github.io/news-feeds/audio/fsn-latest.mp3?ts=1694123456"
            type="audio/mpeg" />
 ```
 
@@ -133,7 +134,8 @@ This matches the BBC approach and ensures consistent behavior across both feeds.
 ```
 news-feeds/
 ├── audio/
-│   └── bbc-latest.mp3
+│   ├── bbc-latest.mp3
+│   └── fsn-latest.mp3
 ├── feeds/
 │   ├── bbc-world-news.xml
 │   └── fsn-world-news.xml
@@ -151,7 +153,7 @@ news-feeds/
 
 We now have:
 
-- Reliable cron scheduling.
+- Reliable (?) cron scheduling.
 - Robust recording windows.
 - Clean, timestamped episode metadata.
 - Fully Overcast‑compatible enclosure URLs.
