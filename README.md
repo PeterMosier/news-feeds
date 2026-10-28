@@ -29,8 +29,8 @@ To replace Hourly News, I thought I would be able to simply create a folder in O
 - AP: Headline News from The Associated Press
 
 For balance, I also include some right wing news sources
-- Fox News Hourly Update (I like to hear how the fascists are spinning the news)
-- Salem Radio News ("newscasts...specifically created for Christian-formatted radio stations" <barf /> ) 
+- Fox News Hourly Update (I like to hear how the fascists are spinning the news. 🤮 They spin Pres Trump to sound like a normal healthy sane person, and every cop/ICE agent is a hero that can never do wrong)
+- Salem Radio News ("newscasts...specifically created for Christian-formatted radio stations" 🤮 They spin Pres Trump to sound like a normal healthy sane person and always have a Xtian adjacent story: Xtians are persecuted, beware the trans, they're eating the dogs, etc.) 
 
 
 ## Missing Favourites ##
