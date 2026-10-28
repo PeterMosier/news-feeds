@@ -43,7 +43,7 @@ FSN updates their MP3 at a static URL (https://www.fsnradionews.com/FSNNews/FSNW
 
 Problem: if FSN has not actually updated the MP3 content (e.g. on the weekend there are no updates) the GH Action still updates the RSS/XML with a new timestamp and GUID, and Overcast will incorrectly think there is an update and show a "new" episode is available, even though the MP3 content hasn't changed. For now, I'm willing to live with this glitch.
 
-The following RSS/XML works with Overcast. (Overcast > Magnifying Glass Icon > Add URL)
+The following RSS/XML works with Overcast. (Overcast > 🔎 > Add URL)
 
 https://petermosier.github.io/news-feeds/feeds/fsn-world-news.xml
 
@@ -57,7 +57,7 @@ Once per hour, at one minute before the top of the hour (xx:59), a Github action
 My eight minute MP3 (no, you cannot simply jam this into a podcast app!)
 https://petermosier.github.io/news-feeds/audio/bbc-latest.mp3
 
-The following XML works with Overcast. (Overcast > Magnifying Glass Icon > Add URL)
+The following XML works with Overcast. (Overcast > 🔎 > Add URL)
 
 https://petermosier.github.io/news-feeds/feeds/bbc-world-news.xml
 
